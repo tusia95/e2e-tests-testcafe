@@ -14,13 +14,13 @@ fixture(`Group spec`)
 
 test('Navigate To URL test', async t => {
     const teacherWin = await t.getCurrentWindow();
-    // await t.maximizeWindow();
-    // // open window for first student
-    // const firstStudentWin = await t.openWindow('https://vimbox.skyeng.ru');
-    // await t.maximizeWindow();
-    // //open window for second student
-    // const secondStudentWin = await t.openWindow('https://vimbox.skyeng.ru');
-    // await t.maximizeWindow();
+    await t.maximizeWindow();
+    // open window for first student
+    const firstStudentWin = await t.openWindow('https://vimbox.skyeng.ru');
+    await t.maximizeWindow();
+    //open window for second student
+    const secondStudentWin = await t.openWindow('https://vimbox.skyeng.ru');
+    await t.maximizeWindow();
 
     //login as teacher
     await t.switchToWindow(teacherWin);
